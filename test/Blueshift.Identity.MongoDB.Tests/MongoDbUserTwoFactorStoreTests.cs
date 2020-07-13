@@ -28,7 +28,7 @@ namespace Blueshift.Identity.MongoDB.Tests
         [Fact]
         public async Task Can_set_two_factor_enabled_async()
         {
-            var user = CreateUser();
+            +var user = CreateUser();
             await _mongoDbUserTwoFactorStore.SetTwoFactorEnabledAsync(user, false, new CancellationToken());
             Assert.False(user.TwoFactorEnabled);
             await _mongoDbUserTwoFactorStore.SetTwoFactorEnabledAsync(user, true, new CancellationToken());
